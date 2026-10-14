@@ -1,5 +1,5 @@
 const KEY='my-god-box-v1';
-const VERSION='1.2.0';
+const VERSION='1.3.0';
 const defaultState={entries:[],reflections:[],theme:'classic'};
 let state=load(); let current='home'; let filter='';
 const $=s=>document.querySelector(s); const main=$('#main');
@@ -36,4 +36,4 @@ let toastTimer;function toast(msg){let t=document.getElementById('toast');if(!t)
 function openDrawer(){$('#drawer').classList.remove('hidden');$('#drawer').setAttribute('aria-hidden','false')}
 function closeDrawer(){$('#drawer').classList.add('hidden');$('#drawer').setAttribute('aria-hidden','true')}
 $('#menuBtn').onclick=openDrawer;$('#closeDrawer').onclick=closeDrawer;$('#brandHome').onclick=()=>setView('home');$('#drawer').onclick=e=>{if(e.target.id==='drawer'){closeDrawer();return}const b=e.target.closest('[data-drawer]');if(b){closeDrawer();setView(b.dataset.drawer)}};$('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};$('#lockBtn').onclick=()=>toast('App lock can be added later; your writing is already stored locally in this browser.')
-applyTheme();render();if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+applyTheme();render();
