@@ -13,3 +13,13 @@ body.theme-midnight{--bg:#07090d;--surface:#10141b;--surface2:#151b25;--gold:#9f
 @media print{.topbar,.bottom-nav,.primary,.secondary,.icon-btn{display:none!important}body{background:#fff;color:#111}.screen{padding:0}.card,.entry{border:1px solid #ccc;box-shadow:none;background:#fff;color:#111}.entry-text{color:#111}.print-title{display:block}}
 
 .brand-button:focus-visible,.icon-btn:focus-visible,.drawer-link:focus-visible,.primary:focus-visible,.secondary:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}.drawer-brand{display:flex;align-items:center;gap:10px}.drawer-icon{width:42px;height:42px;border-radius:11px;object-fit:cover;border:1px solid rgba(227,184,107,.5)}.drawer-note{font-size:12px;color:var(--muted);margin:0 0 16px 4px}.drawer-link{font-size:15px}.drawer-symbol{width:22px;text-align:center;color:var(--gold2);font-size:18px}.primary-link{background:rgba(227,184,107,.08);border:1px solid rgba(227,184,107,.14)}.drawer-footer{margin-top:auto;padding:24px 8px 8px;color:#777;font-size:11px;line-height:1.5}.drawer{display:flex;flex-direction:column}.screen{padding-bottom:30px}
+
+/* v1.3.1 polish */
+.home-links{display:flex;flex-direction:column;align-items:center;gap:4px;margin:18px 0 4px}
+.text-link{appearance:none;background:transparent;border:0;color:var(--gold2);font-size:13px;padding:7px 10px;cursor:pointer;opacity:.9}
+.text-link:hover{text-decoration:underline;opacity:1}
+.text-link:focus-visible{outline:2px solid var(--gold2);outline-offset:2px;border-radius:8px}
+.hero{padding-top:30px}
+.screen{padding-top:8px}
+.topbar{min-height:72px}
+@media(max-width:699px){.title{font-size:39px}.box-wrap{padding-top:20px}.home-links{margin-top:16px}}

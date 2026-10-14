@@ -1,5 +1,5 @@
 const KEY='my-god-box-v1';
-const VERSION='1.3.0';
+const VERSION='1.3.1';
 const defaultState={entries:[],reflections:[],theme:'classic'};
 let state=load(); let current='home'; let filter='';
 const $=s=>document.querySelector(s); const main=$('#main');
@@ -9,7 +9,7 @@ function esc(s=''){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'
 function dateStr(d){return new Intl.DateTimeFormat(undefined,{month:'short',day:'numeric',year:'numeric'}).format(new Date(d))}
 function timeStr(d){return new Intl.DateTimeFormat(undefined,{hour:'numeric',minute:'2-digit'}).format(new Date(d))}
 function applyTheme(){document.body.className=state.theme==='classic'?'':'theme-'+state.theme}
-function setView(v){current=v; filter=''; render()}
+function setView(v){current=v; filter=''; render(); window.scrollTo({top:0,behavior:'instant'})}
 function render(){if(current==='home')renderHome();else if(current==='entries')renderEntries('entries');else if(current==='reflections')renderEntries('reflections');else if(current==='reflect')renderReflect();else if(current==='quiet')renderQuiet();else if(current==='themes')renderThemes();else if(current==='settings')renderSettings();else if(current==='about')renderAbout()}
 function renderHome(){main.innerHTML=`<section class="hero"><div class="eyebrow">A quiet place to let go</div><h1 class="title">My God Box</h1><p class="subtitle">Turn over what you cannot control. Keep what is yours to do.</p></section><div class="box-wrap"><div class="box"><div class="latch"></div></div></div><section class="card"><label class="small" for="entry">What's weighing on you?</label><textarea id="entry" maxlength="2000" placeholder="Write it down. You don't have to solve it here."></textarea><div class="counter" id="counter">0 / 2000</div><button class="primary" id="turnOver">TURN IT OVER</button></section><div class="home-links"><button class="text-link" id="homeEntries">View what you've turned over →</button><button class="text-link" id="homeReflections">View saved reflections →</button></div><p class="hint">You can write as much or as little as you want.</p>`;
 const ta=$('#entry');ta.addEventListener('input',()=>$('#counter').textContent=`${ta.value.length} / 2000`);$('#turnOver').onclick=()=>turnOver(ta.value.trim());$('#homeEntries').onclick=()=>setView('entries');$('#homeReflections').onclick=()=>setView('reflections')}

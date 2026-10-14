@@ -2,7 +2,7 @@
 
 My God Box is a local-first, mobile-friendly web app for writing down what you cannot control, turning it over, and optionally reflecting.
 
-## v1.3.0
+## v1.3.1
 - Uses the full My God Box logo as favicon, Apple touch icon, and PWA icon.
 - Replaced bottom navigation with a single slide-out menu to avoid duplicate navigation.
 - Added obvious home links and a dedicated **My Reflections** screen.
