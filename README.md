@@ -29,3 +29,11 @@ Entries and reflections are stored in the browser's `localStorage`. Nothing is s
 - Printer-friendly/PDF via browser print dialog
 - Responsive mobile-first design
 - Basic offline caching / PWA support
+
+
+## v1.1.0
+- Added the My God Box logo as the PWA/app icon and favicon.
+- Removed the redundant Menu item from the bottom navigation.
+- Kept the hamburger drawer for secondary navigation and settings.
+- Added a dedicated My Reflections view with search, detail, and delete.
+- Added Turned Over / Reflections tabs and a View Saved Reflections action.
