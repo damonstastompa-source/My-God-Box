@@ -1,0 +1,10 @@
+{
+  "name":"My God Box",
+  "short_name":"My God Box",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#080909",
+  "theme_color":"#0b0b0b",
+  "description":"A quiet place to turn over what you cannot control.",
+  "icons":[]
+}
