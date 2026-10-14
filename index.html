@@ -7,39 +7,34 @@
 <meta name="description" content="My God Box — a quiet place to turn over what you cannot control.">
 <title>My God Box</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0b0b'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-size='58' fill='%23e3b86b'%3E✦%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="app">
   <header class="topbar">
-    <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    <div class="brand">My God Box</div>
+    <button class="icon-btn menu-button" id="menuBtn" aria-label="Open menu">☰</button>
+    <button class="brand-button" id="brandHome" aria-label="Go to home"><img src="icon-192.png" alt="" class="brand-icon"><span>My God Box</span></button>
     <button class="icon-btn" id="lockBtn" aria-label="Lock app">◉</button>
   </header>
-
   <main id="main" class="screen"></main>
-
-  <nav class="bottom-nav" aria-label="Main navigation">
-    <button data-view="home" class="nav-item active"><span>⌂</span><small>Home</small></button>
-    <button data-view="entries" class="nav-item"><span>▤</span><small>Entries</small></button>
-    <button data-view="reflect" class="nav-item"><span>♡</span><small>Reflect</small></button>
-    <button data-view="quiet" class="nav-item"><span>♧</span><small>Quiet</small></button>
-  </nav>
 </div>
 
-<div id="drawer" class="drawer-backdrop hidden">
-  <aside class="drawer">
-    <div class="drawer-head"><h2>My God Box</h2><button class="icon-btn" id="closeDrawer">×</button></div>
-    <button class="drawer-link" data-drawer="home">⌂ <span>Home</span></button>
-    <button class="drawer-link" data-drawer="entries">▤ <span>My Entries</span></button>
-    <button class="drawer-link" data-drawer="reflections">♡ <span>My Reflections</span></button>
-    <button class="drawer-link" data-drawer="reflect">✎ <span>Write a Reflection</span></button>
-    <button class="drawer-link" data-drawer="quiet">♧ <span>Quiet Space</span></button>
+<div id="drawer" class="drawer-backdrop hidden" aria-hidden="true">
+  <aside class="drawer" aria-label="My God Box menu">
+    <div class="drawer-head"><div class="drawer-brand"><img src="icon-192.png" alt="" class="drawer-icon"><h2>My God Box</h2></div><button class="icon-btn" id="closeDrawer" aria-label="Close menu">×</button></div>
+    <p class="drawer-note">Choose where you'd like to go.</p>
+    <button class="drawer-link primary-link" data-drawer="home"><span class="drawer-symbol">⌂</span><span>Home</span></button>
+    <button class="drawer-link" data-drawer="entries"><span class="drawer-symbol">▤</span><span>My Entries</span></button>
+    <button class="drawer-link" data-drawer="reflections"><span class="drawer-symbol">♡</span><span>My Reflections</span></button>
+    <button class="drawer-link" data-drawer="reflect"><span class="drawer-symbol">✎</span><span>Write a Reflection</span></button>
+    <button class="drawer-link" data-drawer="quiet"><span class="drawer-symbol">☾</span><span>Quiet Space</span></button>
     <hr>
-    <button class="drawer-link" data-drawer="themes">✦ <span>Themes</span></button>
-    <button class="drawer-link" data-drawer="settings">⚙ <span>Settings</span></button>
-    <button class="drawer-link" data-drawer="about">ⓘ <span>About</span></button>
+    <button class="drawer-link" data-drawer="themes"><span class="drawer-symbol">✦</span><span>Themes</span></button>
+    <button class="drawer-link" data-drawer="settings"><span class="drawer-symbol">⚙</span><span>Settings</span></button>
+    <button class="drawer-link" data-drawer="about"><span class="drawer-symbol">ⓘ</span><span>About</span></button>
+    <div class="drawer-footer">Everything stays on this device unless you choose to export it.</div>
   </aside>
 </div>
 
