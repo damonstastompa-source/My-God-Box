@@ -23,3 +23,11 @@ body.theme-midnight{--bg:#07090d;--surface:#10141b;--surface2:#151b25;--gold:#9f
 .screen{padding-top:8px}
 .topbar{min-height:72px}
 @media(max-width:699px){.title{font-size:39px}.box-wrap{padding-top:20px}.home-links{margin-top:16px}}
+
+/* v1.3.3 reflection context */
+.prompt{width:100%;border:0;border-bottom:1px solid rgba(220,220,220,.10);background:transparent;color:inherit;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;font:inherit;cursor:pointer}
+.prompt.selected{color:var(--gold)}
+.selected-prompt,.reflection-context{margin-top:14px;padding:12px 14px;border:1px solid rgba(240,206,145,.18);border-radius:12px;background:rgba(240,206,145,.05)}
+.reflection-prompt{margin-top:5px;color:var(--gold);line-height:1.5}
+.entry-context{font-size:13px;color:var(--gold);margin:8px 0;line-height:1.4}
+.hidden{display:none!important}
